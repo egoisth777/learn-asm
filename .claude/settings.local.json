@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git submodule:*)",
+      "Bash(chmod +x /e/repos/Scripts/.scripts/sync.sh)",
+      "Bash(mv Scripts scripts_tmp)",
+      "Bash(mv scripts_tmp scripts)",
+      "Bash(cd /e)",
+      "Bash(mv repos/Scripts repos/scripts_tmp)",
+      "Bash(mv repos/scripts_tmp repos/scripts)",
+      "Bash(bash .scripts/sync.sh)"
+    ]
+  }
+}
