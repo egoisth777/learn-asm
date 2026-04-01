@@ -1,0 +1,8 @@
+[
+  {"url": "git@github.com:egoisth777/cfg.git", "path": "cfg"},
+  {"url": "git@github.com:egoisth777/code.git", "path": "code"},
+  {"url": "git@github.com:egoisth777/Scripts.git", "path": "scripts"},
+  {"url": "git@github.com:egoisth777/job.git", "path": "job"},
+  {"url": "git@github.com:egoisth777/store.git", "path": "store"},
+  {"url": "git@github.com:egoisth777/obs-vault.git", "path": "obs-vault"}
+]

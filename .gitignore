@@ -1,12 +1,8 @@
-obs-vault
-omni
-dev
-work
-store
-tmp
+cfg
 code
-configs
 scripts
 job
-
+store
+obs-vault
+tmp
 docs
