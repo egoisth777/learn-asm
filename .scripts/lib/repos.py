@@ -8,6 +8,8 @@ DEFAULT_REPOS_FILE = ROOT / "REPOS.json"
 
 
 def load_repos(repos_file: Path = DEFAULT_REPOS_FILE) -> list[dict]:
+    if not repos_file.exists():
+        return []
     return json.loads(repos_file.read_text())
 
 

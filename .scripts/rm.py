@@ -1,13 +1,20 @@
 """Remove a repo."""
 
-import shutil
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+LIB = ROOT / ".scripts" / "lib"
 sys.path.insert(0, str(ROOT / ".scripts"))
 
 from lib.repos import load_repos, save_repos
+
+
+def _rmtree_cmd() -> list[str]:
+    if sys.platform == "win32":
+        return ["pwsh", "-NoProfile", "-File", str(LIB / "rmtree.ps1")]
+    return [str(LIB / "rmtree.sh")]
 
 
 def rm(path: str, root: Path = ROOT) -> None:
@@ -24,7 +31,7 @@ def rm(path: str, root: Path = ROOT) -> None:
 
     target = root / path
     if target.exists():
-        shutil.rmtree(target)
+        subprocess.run(_rmtree_cmd() + [str(target)], check=True)
         print(f"Deleted '{path}'")
 
     # Remove from .gitignore

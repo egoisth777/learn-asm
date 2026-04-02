@@ -4,5 +4,8 @@ scripts
 job
 store
 obs-vault
+texts
 tmp
 docs
+text
+**/__pycache__
