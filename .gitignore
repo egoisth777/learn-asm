@@ -10,3 +10,5 @@ docs
 text
 **/__pycache__
 utils
+vols
+.claude/*
